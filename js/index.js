@@ -32,8 +32,9 @@ images.forEach(function(item) {
 
 const homeLink = document.querySelector('a');
 const h1 = document.querySelector('h1');
-homeLink.addEventListener('click', function() {
+homeLink.addEventListener('click', function(e) {
     h1.style.fontSize = "5rem"
+    e.stopPropagation()
 });
 
 const footer = document.querySelector('.footer');
@@ -48,6 +49,7 @@ footerText.addEventListener('mouseup', function () {
 // Stop propagation
 images.forEach(function(item) {
     item.addEventListener('click', function(e) {
+
         e.target.style.border = "5px dashed black"
     });
 });
