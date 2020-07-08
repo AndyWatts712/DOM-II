@@ -52,9 +52,9 @@ images.forEach(function(item) {
     });
 });
 
-const h2 = document.querySelector('h2');
-h2.addEventListener('mouseover', function(e) {
-    e.target.backgroundColor = "red"
+const container = document.querySelector('.container');
+container.addEventListener('click', function(e) {
+    e.target.style.backgroundColor = "red"
 });
 
 //Prevent default
