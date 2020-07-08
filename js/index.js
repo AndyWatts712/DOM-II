@@ -45,3 +45,28 @@ const footerText = document.querySelector('.footer p');
 footerText.addEventListener('mouseup', function () {
     footer.style.backgroundColor = "blue"
 });
+// Stop propagation
+images.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        e.target.style.border = "5px dashed black"
+    });
+});
+
+const h2 = document.querySelector('h2');
+h2.addEventListener('mouseover', function(e) {
+    e.target.backgroundColor = "red"
+});
+
+//Prevent default
+const button = document.querySelectorAll('.btn');
+button.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+        event.preventDefault()
+    });
+});
+const links = document.querySelectorAll('a');
+links.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+        event.preventDefault()
+    });
+});
